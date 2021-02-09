@@ -1,0 +1,1 @@
+docker exec bob_litecoin_node litecoin-cli -conf=/litecoin.conf "$@"

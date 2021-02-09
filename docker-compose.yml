@@ -1,0 +1,11 @@
+version: "3.0"
+
+services:
+  bob:
+    image: litecoin-ubuntu-bin
+    container_name: bob_litecoin_node
+    volumes:
+    - ./Bob/litecoin.conf:/litecoin.conf
+    ports:
+    - 18222:18222
+    entrypoint: ['/usr/local/bin/litecoind', '-conf=/litecoin.conf', '-rest=1', '-server=1', '-printtoconsole', '-txindex=1']
